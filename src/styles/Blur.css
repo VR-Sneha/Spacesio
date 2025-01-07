@@ -1,0 +1,43 @@
+
+
+.blur-container {
+  margin-top: 0px;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  overflow: hidden;
+  background: radial-gradient(
+    circle,
+     rgba(10, 10, 10, 0.2) 25%, /* Softer black with 50% opacity */
+    white 45%  /* Transition to white at 70% */
+  );
+}
+
+
+.blur-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+  filter: blur(10px); /* Apply blur effect */
+  -webkit-filter: blur(10px); /* Safari support */
+  z-index: -1; /* Place the background behind content */
+}
+
+.blur-content {
+  position: relative;
+  z-index: 1; /* Ensure content is above the background */
+  width: 100%; /* Ensure content stretches properly */
+}
+
+
+@media (max-width: 768px) {
+  .blur-container {
+    height: 70vh;
+  }
+  
+}

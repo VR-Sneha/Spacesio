@@ -1,0 +1,97 @@
+.footer {
+  background-color: #4a4a4a;
+  color: white;
+  padding: 2rem 1rem; /* Adjusted padding for smaller screens */
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 1.5rem; /* Added spacing for flexibility */
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo-image {
+  max-width: 150px; /* Ensures logo scales on smaller screens */
+  height: auto;
+}
+
+.social-link {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: #888;
+}
+
+.footer-right .nav-links {
+  display: flex;
+  flex-wrap: wrap; /* Adjust layout for smaller screens */
+  gap: 1.5rem; /* Uniform spacing for links */
+  justify-content: center; /* Center align on smaller screens */
+}
+
+.footer-right .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-right .nav-links a:hover {
+  color: #888;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center;
+    gap: 2rem; /* Spacing between sections */
+  }
+
+  .footer-right .nav-links {
+    flex-direction: column; /* Stack links vertically */
+    gap: 1rem; /* Add vertical spacing */
+    align-items: center;
+  }
+
+  .footer-logo-image {
+    max-width: 120px; /* Scale logo for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.5rem 1rem; /* Reduced padding for very small screens */
+  }
+
+  .footer-right .nav-links a {
+    font-size: 0.9rem; /* Adjusted font size for readability */
+  }
+}

@@ -1,0 +1,220 @@
+/* General Body Styling */
+.contact-body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 45px 20px 20px 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.contact-heading {
+  justify-items: center;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 300;
+  color: #333;
+}
+.contact-underline {
+  background-color: #888;
+  margin-bottom: 30px;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  width: 220px;
+  margin-top: -30px;
+  border-radius: 500px;
+  height: 3px;
+}
+/* Container Styling */
+.container {
+  /*  background-color: rgb(39, 38, 38); */
+  display: flex;
+  gap: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+  align-self: center;
+  align-items: center;
+  justify-items: center;
+  justify-self: center;
+  justify-content: center; /* Centers the content */
+  flex-direction: column;
+  width: 100%; /* Adjust to 100% of parent width */
+  box-sizing: border-box; /* Includes padding and border in width calculation */
+  overflow: hidden; /* Prevent horizontal overflow */
+}
+
+/* Left Section: Info Boxes */
+.info-section {
+  width: 70%; /* Increased width for better centering */
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center; /* Center align the info boxes */
+  justify-content: center;
+  box-sizing: border-box; /* Include padding/border in width calculation */
+}
+
+/* Info Box Styling */
+.info-box {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 220px; /* Increased width */
+  height: 150px; /* Increased height */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.info-box:hover {
+  background-color: #f7f7f7;
+  transform: translateY(5px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styling */
+.info-box i {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+  align-self: left;
+  justify-self: left;
+  justify-items: left;
+  align-items: left;
+  align-content: left;
+  justify-content: left;
+}
+
+.fa-clipboard-list {
+  margin-right: 2px;
+}
+
+.fa-comment-dots {
+  margin-top: -30px;
+}
+
+/* Heading Styling */
+.info-box h3 {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 7px;
+  color: #555;
+}
+
+/* Paragraph Styling */
+.info-box p {
+  margin-top: 0;
+  font-size: 15px;
+  color: #777;
+}
+
+/* Right Section: Contact Form */
+/* Right Section: Contact Form */
+.form-section {
+  width: 60%; /* Increased width of the contact form */
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box; /* Include padding/border in width calculation */
+  transition: all 0.5s ease-in-out;
+}
+
+.form-section h2:nth-child(1) {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  border-bottom: 1px solid black; /* Black border */
+}
+
+.form-section h2:nth-child(2) {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  border-bottom: 1px solid black; /* Black border */
+}
+
+.form-section h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #555;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Form Group */
+form .form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid black; /* Black border */
+  background-color: #fff;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+form textarea {
+  height: 100px;
+  resize: none;
+}
+
+form i {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  font-size: 18px;
+}
+
+/* Form Button */
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+
+@media (max-width: 768px) {
+  .contact-underline{
+    width: 190px;
+  }
+  .info-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .info-box {
+    width: 100%;
+  }
+
+  .form-section {
+    width: 100%;
+  }
+  
+}

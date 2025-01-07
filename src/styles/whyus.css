@@ -1,0 +1,31 @@
+.whyus-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100vw;
+    margin: 0 auto;
+}
+
+.whyus-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.whyus-title h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+.whyus-content {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.whyus-content p {
+    margin-bottom: 20px;
+}
+
+.whyus-content p:last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,223 @@
+/* Testimonial Section */
+.testimonial-section {
+  padding: 35px 20px;
+  margin-bottom: 20px;
+  background: #fff;
+  text-align: center;
+  height: 70vh;
+  font-family: "Playfair Display", serif; /* Playfair Display font for the entire section */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Testimonial Heading */
+.testimonial-heading {
+  font-size: 3.3rem;
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 0px;
+  position: relative;
+  display: inline-block;
+  font-family: "Playfair Display", serif;
+}
+
+.testimonial-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50%;
+  height: 4px;
+  background: linear-gradient(90deg, #4d4d4d, #b3b3b3); /* Grey gradient line */
+}
+
+/* Testimonial Slider */
+.testimonial-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 400px;
+  transition: transform 1s ease-in-out;
+}
+
+/* Individual Testimonial Card */
+.testimonial-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 800px;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+.testimonial-card:nth-child(odd) {
+  background: #f7f7f7;
+}
+
+.testimonial-card .testimonial-content {
+  max-width: 500px;
+  text-align: center;
+  transition: transform 0.5s ease-in;
+}
+
+/* Testimonial Text */
+.testimonial-text {
+  font-style: italic;
+  font-size: 1.29rem;
+  border-top: 50px;
+  margin: 15px 0px;
+  color: #666;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #c3c3c3;
+  transition: color 0.3s ease;
+}
+
+.testimonial-name {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+.testimonial-role {
+  font-size: 1rem;
+  color: #888;
+  margin-top: -25px;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.prev-button,
+.next-button {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 2.5rem;
+  padding: 10px;
+  border: none;
+  border-radius: 0%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.next-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1) translateX(-5px);
+}
+
+.prev-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1) translateX(5px);
+}
+
+/* Slide In Animation */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide Out Animation */
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .testimonial-section{
+    height: 40vh;
+  }
+.testimonial-card {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  height: 100px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  width: 55%;
+  opacity: 0;
+}
+.navigation-buttons {
+  top: 42%;
+}
+.testimonial-text{
+  max-width: 200px;
+  font-size: 0.8rem;
+}
+.testimonial-name {
+  font-size: 0.8rem;
+  margin-top: 0px;
+  color: #333;
+}
+
+.testimonial-role {
+  font-size: 0.5rem;
+  color: #888;
+  margin-top: -10px;
+}
+  .testimonial-heading {
+    font-size: 2.2rem;
+  }
+
+  .testimonial-slider {
+    width: 100%;
+    height: auto;
+  }
+
+  .testimonial-card {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-heading {
+    font-size: 1.8rem;
+  }
+
+  .testimonial-card {
+    padding: 30px;
+  }
+
+  .prev-button,
+  .next-button {
+    font-size: 1.8rem;
+  }
+}

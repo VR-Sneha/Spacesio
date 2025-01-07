@@ -1,0 +1,36 @@
+.window-panel {
+  height: 70vh; /* Height of the window */
+  width: 100%; /* Full width of the container */
+  position: relative; /* So the child elements are positioned relative to this */
+  overflow: hidden; /* Prevents the image from overflowing outside */
+  background: transparent; /* Keeps it transparent */
+  clip-path: inset(0); /* Ensures content is clipped to the window-panel bounds */
+}
+
+.bg-image {
+  position: fixed; /* The image is fixed in place */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Image width is the full width of the viewport */
+  height: 100vh; /* Image height is the full height of the viewport */
+  object-fit: cover; /* Makes sure the image covers the area */
+  z-index: -1000; /* Ensure it stays behind the content */
+  transition: opacity 1s ease; /* Optional: fade-in effect */
+}
+
+.visible {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .window-panel {
+    height: 50vh; /* Height of the window */
+  }
+.bg-image {
+  object-fit: cover; /* Makes sure the image covers the area */
+}
+}
